@@ -1,0 +1,18 @@
+:root { font-family: ui-sans-serif, system-ui, Arial; }
+body { margin: 0; background: #f8fafc; color: #0f172a; }
+.container { max-width: 1100px; margin: 24px auto; padding: 0 16px; }
+.card { background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; }
+.input, select { padding: 8px; border: 1px solid #cbd5e1; border-radius: 6px; width: 100%; box-sizing: border-box; }
+.btn { padding: 8px 12px; border: 1px solid #1e293b; background: #0ea5e9; color: white; border-radius: 6px; cursor: pointer; }
+.btn.secondary { background: #64748b; }
+.btn.link { background: transparent; color: #0ea5e9; border: none; padding: 0; }
+.badge { padding: 2px 8px; border-radius: 999px; font-size: 12px; border: 1px solid #e2e8f0; }
+.badge.today { background: #e0f2fe; }
+.badge.overdue { background: #fee2e2; }
+.table { width: 100%; border-collapse: collapse; }
+.table th, .table td { padding: 10px; border-bottom: 1px solid #e2e8f0; text-align: left; }
+.row:hover { background: #f1f5f9; }
+.flex { display: flex; gap: 8px; align-items: center; }
+.space { height: 16px; }
+.drawer { position: fixed; top: 0; right: 0; width: 420px; height: 100vh; background: white; border-left: 1px solid #e2e8f0; padding: 16px; overflow: auto; }
+.overlay { position: fixed; inset: 0; background: rgba(0,0,0,.2); }
