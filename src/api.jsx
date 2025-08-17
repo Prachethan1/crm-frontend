@@ -16,12 +16,11 @@ async function http(path, { method='GET', body, auth=true } = {}) {
   return ct.includes('application/json') ? res.json() : res.text();
 }
 
-// Auth
 export const api = {
   async register(email, password){ return http('/auth/register', { method:'POST', auth:false, body:{ email, password } }); },
   async login(email, password){ return http('/auth/login', { method:'POST', auth:false, body:{ email, password } }); },
 
-  // Leads
+
   async listLeads({ status, dueToday, page, size }){
     const q = new URLSearchParams();
     if (status) q.set('status', status);

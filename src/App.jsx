@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import './styles.css'
 import Login from './auth/Login.jsx'
 import Register from './auth/Register.jsx'
 import LeadsPage from './leads/LeadsPage.jsx'
@@ -11,7 +12,7 @@ export default function App(){
   return (
     <div className="container">
       <header className="flex" style={{justifyContent:'space-between'}}>
-        <h2>CRM Lite</h2>
+        <h2 style={{}}>CRM Lite</h2>
         <div className="flex">
           {getToken() && <button className="btn secondary" onClick={()=>{ clearToken(); setView('login'); }}>Logout</button>}
         </div>
@@ -19,9 +20,20 @@ export default function App(){
 
       <div className="space"></div>
 
-      {view==='login' && <Login goRegister={()=>setView('register')} onLoggedIn={()=>setView('leads')} />}
-      {view==='register' && <Register goLogin={()=>setView('login')} onRegistered={()=>setView('leads')} />}
-      {view==='leads' && <LeadsPage />}
+      {view==='login' && (
+  <div className="auth-wrapper">
+    <Login goRegister={()=>setView('register')} onLoggedIn={()=>setView('leads')} />
+  </div>
+)}
+
+{view==='register' && (
+  <div className="auth-wrapper">
+    <Register goLogin={()=>setView('login')} onRegistered={()=>setView('leads')} />
+  </div>
+)}
+
+{view==='leads' && <LeadsPage />}
+
     </div>
   )
 }

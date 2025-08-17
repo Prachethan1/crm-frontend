@@ -24,8 +24,8 @@ export default function Register({ goLogin, onRegistered }){
         <div className="space"></div>
         {err && <div style={{color:'#b91c1c'}}>{err}</div>}
         <button className="btn" type="submit">Register</button>
-        <button type="button" className="btn link" onClick={goLogin}>Back to login</button>
-      </form>
+        <button type="button" className="btn link" onClick={goLogin}>login</button>
+      </form> 
     </div>
   )
 }

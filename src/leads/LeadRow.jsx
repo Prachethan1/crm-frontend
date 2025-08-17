@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { api } from '../api.jsx'
 
+
 export default function LeadRow({ lead, onOpen, onChanged }){
   const [editing, setEditing] = useState(false)
   const [status, setStatus] = useState(lead.status)
@@ -32,7 +33,9 @@ export default function LeadRow({ lead, onOpen, onChanged }){
       <td>
         {editing ? <input type="date" className="input" value={next||''} onChange={e=>setNext(e.target.value)} style={{width:150}}/>
                  : (lead.nextFollowUp || '-')}
+                 
       </td>
+      
       <td>{lead.badge ? <span className={badgeCls}>{lead.badge}</span> : ''}</td>
       <td className="flex">
         {!editing && <button className="btn secondary" onClick={()=>setEditing(true)}>Edit</button>}

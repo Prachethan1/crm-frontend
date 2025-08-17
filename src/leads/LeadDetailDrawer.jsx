@@ -30,7 +30,10 @@ export default function LeadDetailDrawer({ leadId, onClose }){
         <div><b>Company:</b> {lead.company || '-'}</div>
         <div><b>Email:</b> {lead.email || '-'}</div>
         <div><b>Phone:</b> {lead.phone || '-'}</div>
-        <div><b>Status:</b> {lead.status} &nbsp; {lead.badge && <span className={lead.badge==='Today'?'badge today':'badge overdue'}>{lead.badge}</span>}</div>
+        <div><b>Status:</b> {lead.status} &nbsp; 
+    
+        
+        {lead.badge && <span className={lead.badge==='Today'?'badge today':'badge overdue'}>{lead.badge}</span>}</div>
         <div><b>Next Follow-up:</b> {lead.nextFollowUp || '-'}</div>
         <div className="space"></div>
         <h4>Notes</h4>
